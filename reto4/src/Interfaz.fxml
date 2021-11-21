@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="842.0" style="-fx-background-color: #c3c4c4,        linear-gradient(#d6d6d6 50%, white 100%),        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InterfazController">
+  <tabs>
+    <Tab text="Ingresar">
+      <content>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="123.0" text="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="103.0" text="ID" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label prefHeight="17.0" prefWidth="94.0" text="Municipio" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="textNombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="textID" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="textMunicipio" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <TextField fx:id="textTipoCuerpo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="textTipoAgua" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <TextField fx:id="textIrca" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Label text="Tipo de cuerpo" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="Tipo de agua" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="IRCA" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Button fx:id="btnIngresar" mnemonicParsing="false" onAction="#eventoIngresar" prefHeight="34.0" prefWidth="84.0" style="-fx-background-color: #a6b5c9,        linear-gradient(#303842 0%, #3e5577 20%, #375074 100%),        linear-gradient(#768aa5 0%, #849cbb 5%, #5877a2 50%, #486a9a 51%, #4a6c9b 100%); -fx-background-insets: 0 0 -1 0,0,1; -fx-background-radius: 5,5,4; -fx-text-fill: #242d35; -fx-text-fill: #ffffff;" text="Ingresar" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="btnComprobarConexion" mnemonicParsing="false" onAction="#eventoComprobarConexion" prefHeight="32.0" prefWidth="172.0" text="Comprobar Conexion" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Label fx:id="labelEstado" prefHeight="53.0" prefWidth="171.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                  <Label fx:id="estadoRegistro" prefHeight="34.0" prefWidth="214.0" GridPane.columnSpan="7" GridPane.halignment="LEFT">
+                     <GridPane.margin>
+                        <Insets left="84.0" />
+                     </GridPane.margin></Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                     <image>
+                        <Image url="@imagen1.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Registros" GridPane.columnSpan="7" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Separator prefWidth="200.0" GridPane.columnSpan="7" GridPane.valignment="BOTTOM" />
+               </children>
+            </GridPane>
+      </content>
+    </Tab>
+    <Tab text="Procesar datos">
+      <content>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="0.0" prefWidth="0.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="356.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="66.0" minWidth="0.0" prefWidth="9.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="354.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="0.0" prefWidth="0.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <TextArea fx:id="areaObtenerDatos" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Registros" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="4" />
+                  <Button fx:id="btnObtenerDatos" mnemonicParsing="false" onAction="#eventoObtenerDatos" text="Obetener datos" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <TextArea fx:id="areaProcesarDatos" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Registros procesados" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="4" />
+                  <Button fx:id="btnProcesarDatos" mnemonicParsing="false" onAction="#eventoProcesarDatos" text="Procesar datos" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowSpan="7" />
+                  <Separator prefWidth="200.0" GridPane.columnSpan="5" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+      </content>
+    </Tab>
+      <Tab text="Editar/Eliminar">
+        <content>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="ID" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="textIdBuscar" prefHeight="28.0" prefWidth="97.0" promptText="ingresar ID" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#eventoBuscar" prefHeight="7.0" prefWidth="110.0" text="Buscar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="7.0" />
+                     </GridPane.margin></Button>
+                  <Separator prefWidth="200.0" GridPane.columnSpan="8" GridPane.rowIndex="3" />
+                  <TextField fx:id="muestraNombre" promptText="nuevo nombre" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="muestraMunicipio" promptText="nuevo municipio" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                  <TextField fx:id="muestraCuerpoAgua" promptText="nuevo tipo cuerpo de agua" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="muestraId" promptText="nuevo ID" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <TextField fx:id="muestraTipoAgua" promptText="nuevo tipo de agua" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                  <TextField fx:id="muestraIrca" promptText="nuevo irca" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                  <Label text="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="ID" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="Municipio" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="T. cuerpo de agua" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="Tipo de agua" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label text="IRCA" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#eventoEditar" prefHeight="25.0" prefWidth="143.0" text="Editar" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <GridPane.margin>
+                        <Insets right="7.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eventoEliminar" prefHeight="27.0" prefWidth="132.0" text="Eliminar" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                     <GridPane.margin>
+                        <Insets left="7.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Separator prefWidth="200.0" GridPane.columnSpan="8" GridPane.rowIndex="10" />
+                  <Separator prefWidth="200.0" GridPane.columnSpan="8" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+               </children>
+            </GridPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
